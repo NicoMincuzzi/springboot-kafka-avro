@@ -5,18 +5,62 @@
   "fields": [
     {
       "name": "name",
-      "type": "string",
-      "avro.java.string": "String"
+      "type": "string"
     },
     {
       "name": "surname",
-      "type": "string",
-      "avro.java.string": "String"
+      "type": "string"
     },
     {
       "name": "country",
-      "type": "string",
-      "avro.java.string": "String"
+      "type": "string"
+    },
+    {
+      "name": "is_test_user",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "name": "ip_address",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "residency",
+      "type": {
+        "type": "record",
+        "namespace": "com.pettycashmate.kafka.avro",
+        "name": "Residency",
+        "fields": [
+          {
+            "name": "address",
+            "type": "string"
+          },
+          {
+            "name": "zip_code",
+            "type": "string"
+          },
+          {
+            "name": "city",
+            "type": "string"
+          },
+          {
+            "name": "state",
+            "type": [
+              "null",
+              "string"
+            ],
+            "default": null
+          },
+          {
+            "name": "country",
+            "type": "string"
+          }
+        ]
+      }
     }
   ]
 }

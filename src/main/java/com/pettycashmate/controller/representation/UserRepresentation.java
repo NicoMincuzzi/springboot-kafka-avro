@@ -1,6 +1,5 @@
 package com.pettycashmate.controller.representation;
 
-import com.pettycashmate.kafka.avro.User;
 import lombok.Data;
 import org.springframework.lang.NonNull;
 
@@ -16,7 +15,4 @@ public class UserRepresentation {
     @NonNull
     private String country;
 
-    public User from(UserRepresentation user) {
-        return new User(user.getName(), user.getSurname(), user.getCountry());
-    }
 }
